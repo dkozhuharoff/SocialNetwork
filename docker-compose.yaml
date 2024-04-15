@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  social_network:
+    build: .
+    image: social-network
+    container_name: social-network
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - social-network
+    environment:
+      - spring.datasource.url=jdbc:mysql://mysqldb:3306/social_network?allowPublicKeyRetrieval=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
+    depends_on:
+      - mysqldb
+
+  mysqldb:
+    image: "mysql:8.0"
+    container_name: mysqldb
+    restart: always
+    ports:
+      - "3307:3306"
+    networks:
+      - social-network
+    environment:
+      MYSQL_DATABASE: social_network
+      MYSQL_USER: social_network
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+      DATABASE_HOST: mysqldb
+
+networks:
+  social-network:
+    name: social-network
+    external: true
