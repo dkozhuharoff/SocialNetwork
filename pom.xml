@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>social-network-main</artifactId>
+	<artifactId>social-network</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>social-network-main</name>
-	<description>social-network-main</description>
+	<name>social-network</name>
+	<description>social-network</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
