@@ -40,8 +40,8 @@ public class AppConfig {
     server.setDescription("Development");
 
     Contact myContact = new Contact();
-    myContact.setName("Jane Doe");
-    myContact.setEmail("your.email@gmail.com");
+    myContact.setName("Daniel Kozhuharov");
+    myContact.setEmail("d.kozhuharoff@gmail.com");
 
     Info information = new Info()
             .title("Employee Management System API")
