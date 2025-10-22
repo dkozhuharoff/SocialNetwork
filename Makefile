@@ -52,16 +52,6 @@ deploy:
 	@echo "✅ Deployment complete!"
 
 # ============================
-# Access Application
-# ============================
-
-.PHONY: open
-open:
-	@echo "🌐 Accessing app on http://localhost:$(NODE_PORT)"
-	@echo "If you use Windows or macOS, port 30080 is already mapped by NodePort."
-	@echo "If you're on Linux, ensure your firewall allows the port."
-
-# ============================
 # Cleanup
 # ============================
 
